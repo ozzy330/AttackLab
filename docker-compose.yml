@@ -6,7 +6,7 @@ services:
       - "15513:15513"
       - "15514:15514"
     volumes:
-      - ./attacklab:/attacklab
+      - .:/attacklab
     working_dir: /attacklab
     command: sh -c "make cleanallfiles && make start && tail -f /dev/null"
     labels:
