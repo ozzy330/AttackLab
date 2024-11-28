@@ -1,7 +1,5 @@
-FROM rockylinux:9
+FROM fedora:latest
 
-RUN dnf update -y
-RUN dnf install epel-release -y
 RUN dnf update -y
 
 
@@ -13,7 +11,6 @@ RUN dnf install -y gcc
 RUN dnf install -y glibc-devel 
 RUN dnf install -y gdb 
 RUN dnf install -y iproute
-
-RUN dnf install -y nftables
+RUN dnf install -y tail
 
 WORKDIR /attacklab
