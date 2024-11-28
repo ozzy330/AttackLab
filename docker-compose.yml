@@ -1,5 +1,5 @@
 services:
-  rocky:
+  fedora:
     build: .
     container_name: attacklab
     ports:
