@@ -1,1 +1,1 @@
-make stop && make cleanallfiles && make start && tail -f /dev/stdout
+make stop && make cleanallfiles && make start
