@@ -14,4 +14,8 @@ RUN dnf install -y glibc-devel
 RUN dnf install -y gdb 
 RUN dnf install -y iproute
 
+RUN dnf install -y nftables
+RUN nft add rule inet filter input tcp dport 1330 accept
+
+
 WORKDIR /attacklab
