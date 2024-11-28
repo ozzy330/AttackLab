@@ -1,0 +1,15 @@
+services:
+  rocky:
+    build: .
+    container_name: attacklab
+    ports:
+      - "15513:15513"
+      - "15514:15514"
+    volumes:
+      - ./attacklab:/attacklab
+    working_dir: /attacklab
+    command: sh -c "make cleanallfiles && make start && tail -f /dev/null"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app.rule=Host(`localhost`)"
+      - "traefik.http.services.app.loadbalancer.server.port=15513"
