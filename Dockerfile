@@ -12,5 +12,6 @@ RUN dnf install -y perl-TimeDate
 RUN dnf install -y gcc 
 RUN dnf install -y glibc-devel 
 RUN dnf install -y gdb 
+RUN dnf install -y iproute
 
 WORKDIR /attacklab
