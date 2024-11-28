@@ -15,7 +15,7 @@ RUN dnf install -y gdb
 RUN dnf install -y iproute
 
 RUN dnf install -y nftables
-RUN nft add rule inet filter input tcp dport 1330 accept
+RUN nft add rule inet filter input tcp dport 15513 accept
 
 
 WORKDIR /attacklab
