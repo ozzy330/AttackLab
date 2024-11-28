@@ -21,7 +21,7 @@ use Time::Local;
 # What is the name of the host that the attacklab servers and daemons
 # are running on? Note that you don't need root access to run the
 # attacklab.  Any Linux desktop will do.
-$SERVER_NAME = "attacklab.ozzy330.com";
+$SERVER_NAME = "192.168.100.67";
 
 # What hint should be displayed on the attacklab request form where the
 # students are asked to enter their user name? Different sites might
