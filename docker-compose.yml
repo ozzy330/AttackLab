@@ -8,4 +8,4 @@ services:
     volumes:
       - .:/attacklab
     working_dir: /attacklab
-    command: sh -c "make cleanallfiles && make start && tail -f /dev/null"
+    command: sh -c "nft -f /attacklab/nftables-config.nft && make cleanallfiles && make start && tail -f /dev/null"
